@@ -1,7 +1,5 @@
-"""Application entry point for Rock, Paper, Scissors."""
-
-from menu import run_menu
-
-
-if __name__ == "__main__":
-    run_menu()
+# Start your CLI app here.
+#
+# Run it with:  python3 src/main.py
+#
+# The brief is in PROJECT.md.
