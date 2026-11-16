@@ -1,4 +1,5 @@
 from game_data import view_stats
+from play_game import run_game
     
 def show_menu():
     is_running = True
@@ -13,9 +14,8 @@ def show_menu():
         print(f"You chose: {choice}")
         
         if choice == "1":
-            print("You chose option 1")
+            run_game()
         elif choice == "2":
-            print("You chose option 2")
             view_stats()
         elif choice == "3":
             is_running = False
