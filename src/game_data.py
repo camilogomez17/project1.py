@@ -3,3 +3,6 @@ game_stats = {
     "losses": 0,
     "ties": 0,
 }
+
+def view_stats():
+    print(game_stats)
