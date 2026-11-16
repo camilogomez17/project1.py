@@ -1,5 +1,5 @@
 from game_data import view_stats
-from play_game import run_game
+from run_game import run_game
     
 def show_menu():
     is_running = True
