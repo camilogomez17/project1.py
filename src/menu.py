@@ -9,7 +9,7 @@ def show_menu():
         print("2. View Statistics")
         print("3. Exit")
         
-        choice = input("Please choose an option!")
+        choice = input("Please choose an option!\n\n>")
         
         print(f"You chose: {choice}")
         
