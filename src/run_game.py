@@ -28,6 +28,7 @@ def run_game():
         else:
             print("Please pick rock, paper, or scissors.")
         
+    # Tell the user the output.
         print("You lost, tied, or won!")
     
     # Update game stats
@@ -38,8 +39,10 @@ def run_game():
     
         game_running = input("Play again?(y/n)").lower()
         if game_running == "y":
-            print("Playing again")
+            print("Playing again\n\n")
             continue
         elif game_running == "n":
-            print("Thanks for playing!!")
+            print("Thanks for playing!!\n\n")
             break
+        else:
+            print("Please pick y/n.\n\n>")
