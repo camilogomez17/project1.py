@@ -1,5 +1,8 @@
-def menu():
-    print("Welcome to the game!\n1. Play game?\n2. View Stats\n 3. Exit\n")
-    choice = input("Choose an option!\n$")
-    return choice
+def show_menu():
+    print("Menu: ")
+    print("1. Play rock, paper, scissors!")
+    print("2. View Statistics")
+    print("3. Exit")
     
+    choice = input("Please choose an option!")
+    print(f"You chose: {choice}")
