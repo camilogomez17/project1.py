@@ -23,7 +23,9 @@ def rock_paper_scissors():
             print("move is invalid")
             continue
         
-        computer_choice = random.randint(1, 2)
+        computer_choice = random.randint(0, 2)
+        
+        user_digit = moves[user_string]
         
         game_logic = (user_digit - computer_choice) % 3
     
