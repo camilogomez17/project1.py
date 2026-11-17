@@ -21,5 +21,5 @@ def rock_paper_scissors():
         
         user_digit = moves[user_string]
         
-        print(user_digit)
+        result = (user_digit - computer_choice) % 3
     
