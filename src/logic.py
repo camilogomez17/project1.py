@@ -17,6 +17,10 @@ def rock_paper_scissors():
         if user_string == "quit":
             break
         
+        if user_string not in moves:
+            print("move is invalid")
+            continue
+        
         computer_choice = random.randint(1, 2)
         
         user_digit = moves[user_string]
