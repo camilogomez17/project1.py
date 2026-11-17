@@ -1,27 +1,30 @@
 def run_game():
     
-    # define game logic
-    def rock_paper_scissors():
-        print("placeholder")
+    game_playing = True
     
-    rock_paper_scissors()
-    # tell the user the result
+    while game_playing:
+        # define game logic
+        def rock_paper_scissors():
+            print("placeholder")
     
-    def game_winner():
-        print("Winner is #placeholder")
+        rock_paper_scissors()
+        # tell the user the result
     
-    game_winner()
-    # update the game_data
+        def game_winner():
+            print("Winner is #placeholder")
     
-    def update_game_data():
-        print("Data updated!")
+        game_winner()
+        # update the game_data
+    
+        def update_game_data():
+            print("Data updated!")
         
-    update_game_data()
+        update_game_data()
         
-    # ask user to play again
+        # ask user to play again
     
-    def play_or_quit():
-        print("Game continuing...\n")
+        def play_or_quit():
+            print("Game continuing...\n")
         
-    play_or_quit()
+        play_or_quit()
     
