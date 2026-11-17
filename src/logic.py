@@ -3,8 +3,6 @@ import random
 def rock_paper_scissors():
     game_running = True
     
-    result = (user_digit - computer_choice + 3) % 3
-    
     results = ["Draw", "You win!", "Computer wins!"]
     
     while game_running:
@@ -29,7 +27,7 @@ def rock_paper_scissors():
         
         user_digit = moves[user_string]
         
-        game_logic = (user_digit - computer_choice) % 3
+        result = (user_digit - computer_choice) % 3
         
         print(results[result])
     
