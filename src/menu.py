@@ -1,5 +1,5 @@
 from game_data import view_stats
-from run_game import run_game
+import logic
     
 def show_menu():
     is_running = True
@@ -12,7 +12,7 @@ def show_menu():
         choice = input("Please choose an option!\n\n>")
         
         if choice == "1":
-            run_game()
+            logic()
         elif choice == "2":
             view_stats()
         elif choice == "3":
