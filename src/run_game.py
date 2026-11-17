@@ -9,7 +9,7 @@ def run_game():
         #computer and user picks
         
         def choices():
-            player = input("Pick:\n0. Rock\n1. Paper\n2. Scissors")
+            player = int(input("Pick:\n0. Rock\n1. Paper\n2. Scissors"))
             computer = random.randint(0,2)
         
         choices()
