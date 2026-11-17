@@ -4,5 +4,13 @@ def rock_paper_scissors():
     game_running = True
     
     while game_running:
-        user_string = input("Choose a move (rock, paper, or scissors):")
+        user_string = moves[input("Choose a move (rock, paper, or scissors):").lower().strip()]
+        
+        moves = {
+            "rock": 0,
+            "paper": 1,
+            "scissors": 2
+        }
+        
+        # convert string to int and assign value
     
