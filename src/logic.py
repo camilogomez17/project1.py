@@ -5,14 +5,14 @@ def rock_paper_scissors():
     
     results = ["Draw", "You win!", "Computer wins!"]
     
+    moves = {
+                        "rock": 0,
+                        "paper": 1,
+                        "scissors": 2,
+                        "quit":3
+                    }
+    
     while game_running:
-        
-        moves = {
-                    "rock": 0,
-                    "paper": 1,
-                    "scissors": 2,
-                    "quit":3
-                }
         
         user_string = input("\nChoose a move (rock, paper, or scissors):").lower().strip()
         
