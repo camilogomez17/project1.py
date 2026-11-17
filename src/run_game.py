@@ -16,8 +16,12 @@ def run_game():
     def update_game_data():
         print("Data updated!")
         
+    update_game_data()
+        
     # ask user to play again
     
     def play_or_quit():
         print("Game continuing...\n")
-    update_game_data()
+        
+    play_or_quit()
+    
