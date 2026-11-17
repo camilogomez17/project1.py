@@ -23,7 +23,7 @@ def rock_paper_scissors():
             print("move is invalid")
             continue
         
-        computer_choice = random.randint(0, 2)
+        computer_choice = random.randrange(3)
         
         user_digit = moves[user_string]
         
