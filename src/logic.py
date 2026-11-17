@@ -12,5 +12,8 @@ def rock_paper_scissors():
             "scissors": 2
         }
         
+        computer_choice = random.randint(1, 2)
+        
+        
         # convert string to int and assign value
     
