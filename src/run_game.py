@@ -9,14 +9,14 @@ def run_game():
         #computer and user picks
         
         def choices():
-            player = int(input("Pick:\n0. Rock\n1. Paper\n2. Scissors"))
-            computer = random.randint(0,2)
+            p = int(input("Pick:\n0. Rock\n1. Paper\n2. Scissors"))
+            c = random.randint(0,2)
         
         choices()
         
         # define game logic
-        def rock_paper_scissors(player, computer):
-            return (player - computer) % 3
+        def rock_paper_scissors(p, c):
+            return (p - c) % 3
     
         rock_paper_scissors()
         # tell the user the result
