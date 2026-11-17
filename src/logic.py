@@ -14,7 +14,7 @@ def rock_paper_scissors():
         
         user_string = input("Choose a move (rock, paper, or scissors):").lower().strip()
         
-        if user_string == 4:
+        if user_string == "quit":
             break
         
         computer_choice = random.randint(1, 2)
