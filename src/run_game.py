@@ -4,8 +4,8 @@ def run_game():
     
     while game_playing:
         # define game logic
-        def rock_paper_scissors():
-            print("placeholder")
+        def rock_paper_scissors(player, computer):
+            return (player - computer) % 3
     
         rock_paper_scissors()
         # tell the user the result
