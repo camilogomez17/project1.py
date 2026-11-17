@@ -24,7 +24,15 @@ def run_game():
         # ask user to play again
     
         def play_or_quit():
-            print("Game continuing...\n")
+            playing_or_quitting = input("\n\nContinue playing?\n1. Yes\n2. No\n")
+            if playing_or_quitting == "1":
+                print("Game continuing...\n")
+                continue
+            elif playing_or_quitting == "2":
+                break
+            else:
+                playing_or_quitting = input("\nInvalid input.\nContinue playing?\n1. Yes\n2. No\n")
         
         play_or_quit()
+        
     
