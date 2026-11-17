@@ -1,8 +1,19 @@
+import random
+
 def run_game():
     
     game_playing = True
     
     while game_playing:
+        
+        #computer and user picks
+        
+        def choices():
+            player = input("Pick:\n0. Rock\n1. Paper\n2. Scissors")
+            computer = random.randint(0,2)
+        
+        choices()
+        
         # define game logic
         def rock_paper_scissors(player, computer):
             return (player - computer) % 3
