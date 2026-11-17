@@ -3,6 +3,8 @@ import random
 def rock_paper_scissors():
     game_running = True
     
+    results = ["Draw", "You win!", "Computer wins!"]
+    
     while game_running:
         
         moves = {
