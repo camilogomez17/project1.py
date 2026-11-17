@@ -1,5 +1,5 @@
 from game_data import view_stats
-import logic
+from logic import rock_paper_scissors
     
 def show_menu():
     is_running = True
@@ -12,7 +12,7 @@ def show_menu():
         choice = input("Please choose an option!\n\n>")
         
         if choice == "1":
-            logic()
+            rock_paper_scissors()
         elif choice == "2":
             view_stats()
         elif choice == "3":
