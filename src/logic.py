@@ -14,7 +14,7 @@ def rock_paper_scissors():
                     "quit":3
                 }
         
-        user_string = input("Choose a move (rock, paper, or scissors):").lower().strip()
+        user_string = input("\nChoose a move (rock, paper, or scissors):").lower().strip()
         
         if user_string == "quit":
             break
