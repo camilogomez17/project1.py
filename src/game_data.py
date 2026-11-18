@@ -4,11 +4,10 @@ game_stats = {
     "ties": 0,
 }
 
+# calculate total games
+total_games = game_stats["wins"] + game_stats["losses"] + game_stats["ties"]
+
 def view_stats():
-    
-    # calculate total games
-    
-    total_games = game_stats["wins"] + game_stats["losses"] + game_stats["ties"]
     
     # calculate win rate if total_games is not zero
     
