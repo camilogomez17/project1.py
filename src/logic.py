@@ -38,4 +38,4 @@ def rock_paper_scissors():
         
         game_stats[stat_keys[result]] += 1
         
-        print(f"You chose {computer_move}\nComputer chose {computer_move}\n{results[result]}")
+        print(f"You chose {user_string}\nComputer chose {computer_move}\n{results[result]}")
