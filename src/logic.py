@@ -34,7 +34,7 @@ def rock_paper_scissors():
         
         user_digit = moves[user_string]
         
-        result = (user_digit - computer_move) % 3
+        result = (user_digit - computer_choice) % 3
         
         game_stats[stat_keys[result]] += 1
         
