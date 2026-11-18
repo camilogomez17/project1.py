@@ -3,7 +3,6 @@ import random
 from game_data import game_stats
 
 def rock_paper_scissors():
-    game_running = True
     
     results = ["Draw", "You win!", "Computer wins!"]
     
@@ -16,7 +15,7 @@ def rock_paper_scissors():
     
     stat_keys = ["ties", "wins", "losses"]
     
-    while game_running:
+    while True:
         
         user_string = input("\nChoose a move (rock, paper, or scissors):").lower().strip()
         
