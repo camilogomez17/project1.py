@@ -20,7 +20,5 @@ def view_stats():
         print("Please play a game.")
     else:
         win_rate = (game_stats["wins"] / total_games) * 100
-        
-    # display statistics
-    
-    print(f"{game_stats}\nwin_rate:{win_rate}%")
+        # display statistics
+        print(f"{game_stats}\nwin_rate:{win_rate}%")
