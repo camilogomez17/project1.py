@@ -9,14 +9,10 @@ def view_stats():
     # calculate total games
     
     total_games = game_stats["wins"] + game_stats["losses"] + game_stats["ties"]
-
-    #check whether total games is zero
-    
-    is_zero = total_games == 0
     
     # calculate win rate if total_games is not zero
     
-    if is_zero is True:
+    if total_games == 0:
         print("Please play a game.")
     else:
         win_rate = (game_stats["wins"] / total_games) * 100
