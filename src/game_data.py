@@ -22,6 +22,3 @@ def view_stats():
     # display statistics
     
     print(f"{game_stats}\nwin_rate:{win_rate}%")
-
-def view_stats():
-    print(game_stats)
