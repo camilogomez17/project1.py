@@ -13,6 +13,8 @@ def rock_paper_scissors():
                         "quit":3
                     }
     
+    move_names = ["rock", "paper", "scissors"]
+    
     stat_keys = ["ties", "wins", "losses"]
     
     while True:
@@ -28,11 +30,12 @@ def rock_paper_scissors():
         
         computer_choice = random.randrange(3)
         
+        computer_move = move_names[computer_choice]
+        
         user_digit = moves[user_string]
         
-        result = (user_digit - computer_choice) % 3
+        result = (user_digit - computer_move) % 3
         
         game_stats[stat_keys[result]] += 1
         
-        print(results[result])
-    
+        print(f"You chose {computer_move}\nComputer chose {computer_move}\n{results[result]}")
