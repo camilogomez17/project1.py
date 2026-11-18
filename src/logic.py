@@ -1,5 +1,7 @@
 import random
 
+from game_data import game_stats
+
 def rock_paper_scissors():
     game_running = True
     
@@ -11,6 +13,8 @@ def rock_paper_scissors():
                         "scissors": 2,
                         "quit":3
                     }
+    
+    stat_keys = ["ties", "wins", "losses"]
     
     while game_running:
         
