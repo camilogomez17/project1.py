@@ -1,4 +1,4 @@
-# Rock, Paper, Scissors game.
+# Rock, Paper, Scissors CLI
 
 ## Features
 
@@ -48,3 +48,13 @@ Wins:0
 Ties:0
 Losses:1
 Win rate:0.0%`
+
+# Project Structure
+
+`main.py` welcomes the user and runs the project.
+
+`menu.py` displays the menu, takes user input, and runs `logic.py` or `game_data.py`, as well as allowing the user to quit.
+
+`logic.py` contains the rock, paper, scissors game. This is done via variables, lists, modular arithmetic, and printing to the terminal.
+
+`game_data.py` creates the structure for the game data, and runs operations on it to display to the user their total games, wins, losses, ties, and win rate.
