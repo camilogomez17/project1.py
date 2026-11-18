@@ -9,4 +9,4 @@ One aspect of building this project I found challenging was understanding how co
    through building this project. Explain that concept in simple terms and
    explain how it is used in your project.
 
-[Write your reflection here]
+I gained a deeper understanding of the technical concept called separation of concerns. This is where we separate data from logic. In simple terms it's keeping the operations of the project detached from the data being saved. It is used in my project by having separate files, main.py starts the app, menu.py handles the user's navigation, logic.py exclusively executes game rules, and game_data.py stores the stats and calculates winrate.
