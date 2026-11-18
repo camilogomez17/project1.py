@@ -16,8 +16,6 @@ def rock_paper_scissors():
     
     stat_keys = ["ties", "wins", "losses"]
     
-    game_stats[stat_keys[result]]
-    
     while game_running:
         
         user_string = input("\nChoose a move (rock, paper, or scissors):").lower().strip()
@@ -34,6 +32,8 @@ def rock_paper_scissors():
         user_digit = moves[user_string]
         
         result = (user_digit - computer_choice) % 3
+        
+        game_stats[stat_keys[result]] += 1
         
         print(results[result])
     
