@@ -19,7 +19,7 @@ def rock_paper_scissors():
     
     while True:
         
-        user_string = input("\nChoose a move (rock, paper, or scissors).\n'quit' to exit.").lower().strip()
+        user_string = input("\nChoose a move (rock, paper, or scissors).\n'quit' to exit.\n\n>").lower().strip()
         
         if user_string == "quit":
             break
@@ -38,4 +38,4 @@ def rock_paper_scissors():
         
         game_stats[stat_keys[result]] += 1
         
-        print(f"You chose {user_string}\nComputer chose {computer_move}\n{results[result]}")
+        print(f"\nYou chose {user_string}\nComputer chose {computer_move}\n{results[result]}")
