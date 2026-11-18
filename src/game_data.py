@@ -4,9 +4,17 @@ game_stats = {
     "ties": 0,
 }
 
-total_games = game_stats["wins"] + game_stats["losses"] + game_stats["ties"]
+def view_stats():
+    
+    # calculate total games
+    
+    total_games = game_stats["wins"] + game_stats["losses"] + game_stats["ties"]
 
-win_rate = (game_stats["wins"] / total_games) * 100
+    #check whether total games is zero
+    
+    is_zero = total_games == 0
+    
+    win_rate = (game_stats["wins"] / total_games) * 100
 
 def view_stats():
     print(game_stats)
