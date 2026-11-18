@@ -10,3 +10,11 @@ One aspect of building this project I found challenging was understanding how co
    explain how it is used in your project.
 
 I gained a deeper understanding of the technical concept called separation of concerns. This is where we separate data from logic. In simple terms it's keeping the operations of the project detached from the data being saved. It is used in my project by having separate files, `main.py` starts the app, `menu.py` handles the user's navigation, `logic.py` exclusively executes game rules, and `game_data.py` stores the stats and calculates winrate.
+
+# AI Use On This App
+
+I made the project twice, using implementer mode, and tutor mode. Creating the project this way forced me to individually construe the logic and user navigation. Writing out the code and creating the structure allowed me to see the fine details I did not see before. It allowed me to connect different systems and view different perspectives towards solving the same problem. Additionally, it created new dimensions of abstraction I had not previously seen nor imagined. In this test-driven-development, I applied the red-green-Refactor cycle. In my next project, I will use AI as a specialized tutor so I still own every line.
+
+# AI Use On This App
+
+I made the project twice, using implementer mode, and tutor mode. Creating the project this way forced me to individually construe the logic and user navigation. Writing out the code and creating the structure allowed me to see the fine details I did not see before. It allowed me to connect different systems and view different perspectives towards solving the same problem. Additionally, it created new dimensions of abstraction I had not previously seen nor imagined. In this test-driven-development, I applied the red-green-Refactor cycle. In my next project, I will use AI as a specialized tutor so I still own every line.
