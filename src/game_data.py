@@ -16,7 +16,9 @@ def view_stats():
     
     # calculate win rate if total_games is not zero
     
-    if is_zero is False:
+    if is_zero is True:
+        print("Please play a game.")
+    else:
         win_rate = (game_stats["wins"] / total_games) * 100
         
     # display statistics
