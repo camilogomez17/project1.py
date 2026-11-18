@@ -16,6 +16,8 @@ def rock_paper_scissors():
     
     stat_keys = ["ties", "wins", "losses"]
     
+    game_stats[stat_keys[result]]
+    
     while game_running:
         
         user_string = input("\nChoose a move (rock, paper, or scissors):").lower().strip()
