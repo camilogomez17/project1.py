@@ -4,17 +4,26 @@ game_stats = {
     "ties": 0,
 }
 
-# calculate total games
-total_games = game_stats["wins"] + game_stats["losses"] + game_stats["ties"]
+
+def total_games():
+    return sum(game_stats.values())
+
 
 def view_stats():
-    
-    # calculate win rate if total_games is not zero
-    
-    if total_games == 0:
+    games = total_games()
+
+    if games == 0:
         print("\nPlease play a game.")
-    else:
-        win_rate = (game_stats["wins"] / total_games) * 100
-        # display statistics
-        print(f"\nTotal games:{total_games}\n\nWins:{game_stats["wins"]}\nTies:{game_stats["ties"]}\nLosses:{game_stats["losses"]}\nWin rate:{win_rate}%")
-        return game_stats["wins"] + game_stats["losses"] + game_stats["ties"]
+        return games
+
+    win_rate = (game_stats["wins"] / games) * 100
+
+    print(
+        f"\nTotal games: {games}\n"
+        f"Wins: {game_stats['wins']}\n"
+        f"Ties: {game_stats['ties']}\n"
+        f"Losses: {game_stats['losses']}\n"
+        f"Win rate: {win_rate:.1f}%"
+    )
+
+    return games
