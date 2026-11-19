@@ -30,8 +30,11 @@ def test_view_stats(monkeypatch):
     
     assert calls == ["viewed"]
 
-def test_exit():
-    return None
+def test_exit(monkeypatch):
+    inputs = iter(["3"])
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+    
+    menu.show_menu()
 
 def test_invalid_menu_option():
     return None
