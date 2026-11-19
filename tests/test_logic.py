@@ -1,5 +1,3 @@
-import logic
-
 def test_player_wins():
     return None
 
