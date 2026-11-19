@@ -12,9 +12,6 @@ def test_total_games():
 def test_initial_game_stats():
     return None
 
-def test_total_games():
-    return None
-
 def test_view_stats():
     return None
 
