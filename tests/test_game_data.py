@@ -1,5 +1,4 @@
-from src.game_data import game_stats
-from src.game_data import total_games
+from src.game_data import game_stats, total_games, view_stats
 
 def test_initial_stats():
     assert game_stats["wins"] == 0
@@ -16,7 +15,11 @@ def test_total_games(monkeypatch):
     assert result == 6
 
 def test_view_stats():
-    return None
+    monkeypatch.setitem(game_stats, "wins", 3)
+    monkeypatch.setitem(game_stats, "losses", 2)
+    monkeypatch.setitem(game_stats, "ties", 1)
+    
+    view_stats()
 
 def test_win_rate():
     return None
