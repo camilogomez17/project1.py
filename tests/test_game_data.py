@@ -8,3 +8,21 @@ def test_initial_stats():
     
 def test_total_games():
     assert total_games == 0
+    
+def test_initial_game_stats():
+    return None
+
+def test_total_games():
+    return None
+
+def test_view_stats():
+    return None
+
+def test_win_rate():
+    return None
+
+def test_zero_games():
+    return None
+
+def test_stats_update():
+    return None
