@@ -50,5 +50,14 @@ def test_zero_games(monkeypatch, capsys):
     
     assert "Please play a game." in output
 
-def test_stats_update():
-    return None
+def test_stats_update(monkeypatch, capsys):
+    monkeypatch.setitem(game_stats, "wins", 2)
+    monkeypatch.setitem(game_stats, "losses", 1)
+    monkeypatch.setitem(game_stats, "ties", 0)
+    
+    view_stats()
+    
+    output = capsys.readouterr().out
+    
+    assert "Total games:3" in output
+    assert "Wins:2" in output
