@@ -1,26 +1,26 @@
-def player_wins():
+def test_player_wins():
     return None
 
-def computer_wins():
+def test_computer_wins():
     return None
 
-def draw():
+def test_draw():
     return None
 
-def random_pc_choice():
+def test_random_pc_choice():
     return None
 
-def invalid_player_input():
+def test_invalid_player_input():
     return None
 
-def case_insensitive_input():
+def test_case_insensitive_input():
     return None
 
-def whitespace_handling():
+def test_whitespace_handling():
     return None
 
-def quit_command():
+def test_quit_command():
     return None
 
-def statistics_update():
+def test_statistics_update():
     return None
