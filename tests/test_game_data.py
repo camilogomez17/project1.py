@@ -20,6 +20,13 @@ def test_view_stats(monkeypatch, capsys):
     monkeypatch.setitem(game_stats, "ties", 1)
     
     view_stats()
+    
+    output = capsys.readouterr().out
+    
+    assert "Total games: 6" in output
+    assert "Wins: 3" in output
+    assert "Ties: 1" in output
+    assert "Losses: 2" in output
 
 def test_win_rate():
     return None
