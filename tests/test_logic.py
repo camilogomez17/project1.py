@@ -57,3 +57,11 @@ def test_random_pc_choice(monkeypatch, capsys):
     output = capsys.readouterr().out
     
     assert "Computer chose scissors" in output
+    
+def test_invalid_player_input(monkeypatch, capsys):
+    reset_stats(monkeypatch)
+    
+    inputs = iter(["lizard", "quit"])
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+    
+    logic.rock_paper_scissors()
