@@ -45,3 +45,15 @@ def test_random_pc_choice(monkeypatch, capsys):
     
     inputs = iter(["rock", "quit"])
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+    
+    def fake_random(stop):
+        assert stop == 3
+        return 2
+    
+    monkeypatch.setattr(logic.random, "randrange", lambda _: 0)
+    
+    logic.rock_paper_scissors()
+    
+    output = capsys.readouterr().out
+    
+    assert "Computer chose scissors" in output
