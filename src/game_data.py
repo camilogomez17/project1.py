@@ -17,3 +17,4 @@ def view_stats():
         win_rate = (game_stats["wins"] / total_games) * 100
         # display statistics
         print(f"\nTotal games:{total_games}\n\nWins:{game_stats["wins"]}\nTies:{game_stats["ties"]}\nLosses:{game_stats["losses"]}\nWin rate:{win_rate}%")
+        return game_stats["wins"] + game_stats["losses"] + game_stats["ties"]
