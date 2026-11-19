@@ -46,5 +46,24 @@ def test_invalid_menu_option(monkeypatch, capsys):
     
     assert "Invalid choice" in output
 
-def test_menu_persistence():
-    return None
+def test_menu_persistence(monkeypatch):
+    inputs = iter(["1", "2", "3"])
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+    
+    calls = []
+    
+    monkeypatch.setattr(
+        menu,
+        "rock_paper_scissors",
+        lambda: calls.append("played")
+    )
+    
+    monkeypatch.setattr(
+        menu,
+        "view_stats",
+        lambda: calls.append("viewed")
+    )
+    
+    menu.show_menu()
+    
+    assert calls == ["played", "viewed"]
