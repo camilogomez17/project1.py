@@ -81,3 +81,14 @@ def test_case_insentitive_input(monkeypatch):
     logic.rock_paper_scissors()
     
     assert game_stats["wins"] == 1
+    
+def test_whitespace_handling(monkeypatch):
+    reset_stats(monkeypatch)
+    
+    inputs = iter([" rock ", "quit"])
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+    monkeypatch.setattr(logic.random, "randrange", lambda _: 2)
+    
+    logic.rock_paper_scissors()
+    
+    assert game_stats["wins"] == 1
