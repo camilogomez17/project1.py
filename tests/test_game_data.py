@@ -14,7 +14,7 @@ def test_total_games(monkeypatch):
     
     assert result == 6
 
-def test_view_stats():
+def test_view_stats(monkeypatch, capsys):
     monkeypatch.setitem(game_stats, "wins", 3)
     monkeypatch.setitem(game_stats, "losses", 2)
     monkeypatch.setitem(game_stats, "ties", 1)
