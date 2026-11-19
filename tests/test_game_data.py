@@ -28,8 +28,16 @@ def test_view_stats(monkeypatch, capsys):
     assert "Ties: 1" in output
     assert "Losses: 2" in output
 
-def test_win_rate():
-    return None
+def test_win_rate(monkeypatch, capsys):
+    monkeypatch.setitem(game_stats, "wins", 3)
+    monkeypatch.setitem(game_stats, "losses", 2)
+    monkeypatch.setitem(game_stats, "game_stats", 1)
+    
+    view_stats()
+    
+    output = capsys.readouterr().out
+    
+    assert "Win rate:50.0%" in output
 
 def test_zero_games():
     return None
