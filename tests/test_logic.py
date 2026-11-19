@@ -92,3 +92,37 @@ def test_whitespace_handling(monkeypatch):
     logic.rock_paper_scissors()
     
     assert game_stats["wins"] == 1
+    
+def test_quit_command(monkeypatch):
+    reset_stats(monkeypatch)
+    
+    inputs = iter(["quit"])
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+    
+    def unexpected_random_call():
+        raise AssertionError("Random selection should not happen")
+    
+    monkeypatch.setattr(logic.random, "randrange",
+unexpected_random_call)
+    
+    logic.rock_paper_scissors()
+    
+    assert total_games_for_test() == 0
+    
+def test_statistics_update(monkeypatch):
+    reset_stats(monkeypatch)
+    
+    inputs = iter(["rock", "quit"])
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+    monkeypatch.setattr(logic.random, "randrange", lambda _: 2)
+    
+    logic.rock_paper_scissors()
+    
+    assert game_stats["wins"] == 1
+    
+def total_games_for_tests():
+    return (
+        game_stats["wins"]
+        + game_stats["losses"]
+        + game_stats["ties"]
+    )
