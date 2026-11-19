@@ -1,3 +1,5 @@
+import src.menu
+
 def test_play_option():
     return None
 
