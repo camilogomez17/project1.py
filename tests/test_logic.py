@@ -39,3 +39,9 @@ def test_draw(monkeypatch):
     logic.rock_paper_scissors()
     
     assert game_stats["ties"] == 1
+    
+def test_random_pc_choice(monkeypatch, capsys):
+    reset_stats(monkeypatch)
+    
+    inputs = iter(["rock", "quit"])
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
