@@ -1,5 +1,5 @@
 import logic
-from game_data import game_stats
+from src.game_data import game_stats
 
 def reset_stats(monkeypatch):
     monkeypatch.setitem(game_stats, "wins", 0)
@@ -65,3 +65,19 @@ def test_invalid_player_input(monkeypatch, capsys):
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
     
     logic.rock_paper_scissors()
+    
+    output = capsys.readouterr().out
+    
+    assert "move is invalid" in output
+    assert total_games_for_test() == 0
+    
+def test_case_insentitive_input(monkeypatch):
+    reset_stats(monkeypatch)
+    
+    inputs = iter(["ROCK", "quit"])
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+    monkeypatch.setattr(logic.random, "randrange", lambda _: 2)
+    
+    logic.rock_paper_scissors()
+    
+    assert game_stats["wins"] == 1
