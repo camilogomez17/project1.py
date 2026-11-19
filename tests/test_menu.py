@@ -36,8 +36,15 @@ def test_exit(monkeypatch):
     
     menu.show_menu()
 
-def test_invalid_menu_option():
-    return None
+def test_invalid_menu_option(monkeypatch, capsys):
+    inputs = iter(["invalid", "3"])
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+    
+    menu.show_menu()
+    
+    output = capsys.readouterr().out
+    
+    assert "Invalid choice" in output
 
 def test_menu_persistence():
     return None
