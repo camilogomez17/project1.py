@@ -17,7 +17,18 @@ def test_play_option(monkeypatch):
 
 def test_view_stats(monkeypatch):
     inputs = iter(["2", "3"])
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
     
+    calls = []
+    monkeypatch.setattr(
+        menu,
+        "view_stats",
+        lambda: calls.append("viewed")
+    )
+    
+    menu.show_menu()
+    
+    assert calls == ["viewed"]
 
 def test_exit():
     return None
