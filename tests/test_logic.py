@@ -28,3 +28,14 @@ def test_computer_wins(monkeypatch):
     logic.rock_paper_scissor()
     
     assert game_stats["losses"] == 1
+    
+def test_draw(monkeypatch):
+    reset_stats(monkeypatch)
+    
+    inputs = iter(["rock", "quit"])
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+    monkeypatch.setattr(logic.random, "randrange", lambda _: 0)
+    
+    logic.rock_paper_scissors()
+    
+    assert game_stats["ties"] == 1
