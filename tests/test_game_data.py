@@ -39,8 +39,16 @@ def test_win_rate(monkeypatch, capsys):
     
     assert "Win rate:50.0%" in output
 
-def test_zero_games():
-    return None
+def test_zero_games(monkeypatch, capsys):
+    monkeypatch.setitem(game_stats, "wins", 0)
+    monkeypatch.setitem(game_stats, "losses", 0)
+    monkeypatch.setitem(game_stats, "game_stats", 0)
+    
+    view_stats()
+    
+    output = capsys.readouterr().out
+    
+    assert "Please play a game." in output
 
 def test_stats_update():
     return None
